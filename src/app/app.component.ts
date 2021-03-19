@@ -6,12 +6,20 @@ import { Component } from '@angular/core';
   styleUrls: ['./app.component.css']
 })
 export class AppComponent {
-  showSecret: boolean;
-  log = [];
+  serverElements = [{type: 'server', name: 'Testserver', content: 'Just a test!'}];
 
-  onToggleDisplay() {
-    this.showSecret = !this.showSecret;
-    this.log.push(this.log.length + 1);
-    this.log.push(new Date());
+  onServerAdded(serverData: {serverName: string, serverContent: string}) {
+    this.serverElements.push({
+      type: 'server',
+      name: serverData.serverName,
+      content: serverData.serverContent
+    });
   }
-}
+  onBlueprintAdded(blueprintData: {serverName: string, serverContent: string}) {
+    this.serverElements.push({
+      type: 'blueprint',
+      name: blueprintData.serverName,
+      content: blueprintData.serverContent
+    });
+  }}
+

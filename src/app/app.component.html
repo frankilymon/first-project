@@ -1,26 +1,21 @@
+<!--<app-header></app-header>-->
+<!--<div class="container">-->
+<!--  <div class="row">-->
+<!--    <div class="col-md-12">-->
+<!--      <app-recipes></app-recipes>-->
+<!--      <app-shopping-list></app-shopping-list>-->
+<!--    </div>-->
+<!--  </div>-->
+<!--</div>-->
+
 <div class="container">
-  <div class="row">
-    <div class="col-xs-12">
-      <br>
-      <li>I'm in the AppComponent!</li>
-      <hr>
-<!--      <label>Username</label>-->
-<!--      <input type="text" class="form-control"[(ngModel)]="username">-->
-<!--      <p>{{ username }}</p>-->
-<!--      <button class="btn-primary"-->
-<!--              [disabled]="username === ''"-->
-<!--              (click)="username = ''">Reset</button>-->
-    </div>
-<!--    <app-servers></app-servers>-->
-    <hr>
-<!--    <button class="btn-primary" (click)="showSecret = !showSecret">Display Secret</button>-->
-    <button class="btn-primary" (click)="onToggleDisplay()">Display Secret</button>
-    <p *ngIf="showSecret">Show Password = Ben</p>
-    <div
-      *ngFor="let logItem of log; let i = index"
-      [ngStyle]="{backgroundColor: i >= 4 ? 'grey' : 'white'}"
-      [ngClass]="{'white-text': i >= 4}">
-      {{logItem}}</div>
+  <app-winery (serverCreated)="onServerAdded($event)"
+              (blueprintCreated)="onBlueprintAdded($event)"
+  ></app-winery>
+  <hr>
+  <div class="col-xs-12">
+    <app-server-element
+      *ngFor="let serverElement of serverElements"
+    [srvElement]="serverElement"></app-server-element>
   </div>
 </div>
-
