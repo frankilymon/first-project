@@ -10,7 +10,8 @@ import {
   AfterContentChecked,
   AfterViewInit,
   AfterViewChecked,
-  OnDestroy
+  OnDestroy,
+  ContentChild, ViewChild, ElementRef
 } from '@angular/core';
 
 
@@ -31,7 +32,9 @@ export class ServerElementComponent implements
   AfterViewChecked,
   OnDestroy{
   @Input('srvElement') element: {type: string, name: string, content: string };
+  @ViewChild('heading') header: ElementRef;
   @Input() name: string;
+  @ContentChild('contentParagraph') paragraph: ElementRef;
   constructor() {
     console.log('constructor called!');
   }
@@ -43,6 +46,8 @@ export class ServerElementComponent implements
   }
   ngOnInit(): void {
     console.log('ngOnInit called!');
+    console.log('Text Content: ' + this.header.nativeElement.textContent);
+    console.log('Text Content of paragraph :' + this.paragraph.nativeElement.textContent);
   }
   ngDoCheck() {
     console.log('ngDoCheck called!');

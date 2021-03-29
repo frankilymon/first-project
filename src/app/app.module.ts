@@ -12,6 +12,9 @@ import { AppComponent } from './app.component';
 // import { ShoppingEditComponent } from './shopping-list/shopping-edit/shopping-edit.component';
 import { WineryComponent } from './winery/winery.component';
 import { ServerElementComponent } from './server-element/server-element.component';
+import { GameControlComponent } from './game-control/game-control.component';
+import { OddComponent } from './odd/odd.component';
+import { EvenComponent } from './even/even.component';
 // import {ServerComponent} from './server/server.component';
 // import { ServersComponent } from './servers/servers.component';
 // import { BooksComponent } from './books/books.component';
@@ -29,7 +32,10 @@ import { ServerElementComponent } from './server-element/server-element.componen
     // ShoppingListComponent,
     // ShoppingEditComponent,
     WineryComponent,
-    ServerElementComponent
+    ServerElementComponent,
+    GameControlComponent,
+    OddComponent,
+    EvenComponent
     // ServerComponent,
     // ServersComponent,
     // BooksComponent,

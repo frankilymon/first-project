@@ -8,22 +8,34 @@
 <!--  </div>-->
 <!--</div>-->
 
-<div class="container">
-  <app-winery (serverCreated)="onServerAdded($event)"
-              (blueprintCreated)="onBlueprintAdded($event)"
-  ></app-winery>
-  <hr>
+<!--<div class="container">-->
+<!--  <app-winery (serverCreated)="onServerAdded($event)"-->
+<!--              (blueprintCreated)="onBlueprintAdded($event)"-->
+<!--  ></app-winery>-->
+<!--  <hr>-->
+<!--  <div class="col-xs-12">-->
+<!--    <button class="btn btn-primary" (click)="onChangeFirst()">Change first Element</button>-->
+<!--    <button class="btn btn-danger" (click)="onDestroyFirst()">Destroy first Component</button>-->
+<!--    <app-server-element-->
+<!--      *ngFor="let serverElement of serverElements"-->
+<!--    [srvElement]="serverElement"-->
+<!--    [name]="serverElement.name" >-->
+<!--      <p #contentParagraph>-->
+<!--        <strong *ngIf="serverElement.type === 'server'" style="color: #8b0000">{{ serverElement.content}}</strong>-->
+<!--        <em *ngIf="serverElement.type === 'blueprint'">{{ serverElement.content }}</em>-->
+<!--      </p>-->
+<!--    </app-server-element>-->
+<!--  </div>-->
+<!--</div>-->
+  <div class="row">
+    <div class="col-xs-12">
+      <app-game-control (intervalFired)="onIntervalFired($event)"></app-game-control>
+    </div>
+  </div>
+<div class="row">
   <div class="col-xs-12">
-    <button class="btn btn-primary" (click)="onChangeFirst()">Change first Element</button>
-    <button class="btn btn-danger" (click)="onDestroyFirst()">Destroy first Component</button>
-    <app-server-element
-      *ngFor="let serverElement of serverElements"
-    [srvElement]="serverElement"
-    [name]="serverElement.name" >
-      <p>
-        <strong *ngIf="serverElement.type === 'server'" style="color: #8b0000">{{ serverElement.content}}</strong>
-        <em *ngIf="serverElement.type === 'blueprint'">{{ serverElement.content }}</em>
-      </p>
-    </app-server-element>
+    <app-odd *ngFor="let oddNumber of oddNumbers"[number]="oddNumber"></app-odd>
+    <app-even *ngFor="let evenNumber of evenNumbers"[number]="evenNumber"></app-even>
   </div>
 </div>
+
