@@ -1,12 +1,12 @@
-<!--<app-header></app-header>-->
-<!--<div class="container">-->
-<!--  <div class="row">-->
-<!--    <div class="col-md-12">-->
-<!--      <app-recipes></app-recipes>-->
-<!--      <app-shopping-list></app-shopping-list>-->
-<!--    </div>-->
-<!--  </div>-->
-<!--</div>-->
+<app-header (featureSelected)="onNavigate($event)"></app-header>
+<div class="container">
+  <div class="row">
+    <div class="col-md-12">
+      <app-recipes *ngIf="loadedFeature === 'recipe'"></app-recipes>
+      <app-shopping-list *ngIf="loadedFeature !== 'recipe'"></app-shopping-list>
+    </div>
+  </div>
+</div>
 
 <!--<div class="container">-->
 <!--  <app-winery (serverCreated)="onServerAdded($event)"-->
@@ -27,15 +27,15 @@
 <!--    </app-server-element>-->
 <!--  </div>-->
 <!--</div>-->
-  <div class="row">
-    <div class="col-xs-12">
-      <app-game-control (intervalFired)="onIntervalFired($event)"></app-game-control>
-    </div>
-  </div>
-<div class="row">
-  <div class="col-xs-12">
-    <app-odd *ngFor="let oddNumber of oddNumbers"[number]="oddNumber"></app-odd>
-    <app-even *ngFor="let evenNumber of evenNumbers"[number]="evenNumber"></app-even>
-  </div>
-</div>
+<!--  <div class="row">-->
+<!--    <div class="col-xs-12">-->
+<!--      <app-game-control (intervalFired)="onIntervalFired($event)"></app-game-control>-->
+<!--    </div>-->
+<!--  </div>-->
+<!--<div class="row">-->
+<!--  <div class="col-xs-12">-->
+<!--    <app-odd *ngFor="let oddNumber of oddNumbers"[number]="oddNumber"></app-odd>-->
+<!--    <app-even *ngFor="let evenNumber of evenNumbers"[number]="evenNumber"></app-even>-->
+<!--  </div>-->
+<!--</div>-->
 

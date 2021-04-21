@@ -29,14 +29,18 @@ export class AppComponent {
 //   onDestroyFirst() {
 //     this.serverElements.splice(0,1);
 //   }
-  oddNumbers: number[] = [];
-  evenNumbers: number [] = [];
-  onIntervalFired(firedNumber: number) {
-    if (firedNumber % 2 === 0) {
-      this.evenNumbers.push(firedNumber);
-    }else{
-      this.oddNumbers.push(firedNumber);
-    }
+//   oddNumbers: number[] = [];
+//   evenNumbers: number [] = [];
+//   onIntervalFired(firedNumber: number) {
+//     if (firedNumber % 2 === 0) {
+//       this.evenNumbers.push(firedNumber);
+//     }else{
+//       this.oddNumbers.push(firedNumber);
+//     }
+//   }
+  loadedFeature = 'recipe';
+  onNavigate(feature: string) {
+    this.loadedFeature = feature;
   }
 
  }
