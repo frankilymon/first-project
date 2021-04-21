@@ -10,6 +10,7 @@ import { RecipesDetailComponent } from './recipes/recipe-detail/recipes-detail.c
 import { RecipeItemComponent } from './recipes/recipe-list/recipe-item/recipe-item.component';
 import { ShoppingListComponent } from './shopping-list/shopping-list.component';
 import { ShoppingEditComponent } from './shopping-list/shopping-edit/shopping-edit.component';
+import {DropdownDirective} from './shared/dropdown.directive';
 // import { WineryComponent } from './winery/winery.component';
 // import { ServerElementComponent } from './server-element/server-element.component';
 // import { GameControlComponent } from './game-control/game-control.component';
@@ -31,6 +32,7 @@ import { ShoppingEditComponent } from './shopping-list/shopping-edit/shopping-ed
     RecipeItemComponent,
     ShoppingListComponent,
     ShoppingEditComponent,
+    DropdownDirective
     // WineryComponent,
     // ServerElementComponent,
     // GameControlComponent,
