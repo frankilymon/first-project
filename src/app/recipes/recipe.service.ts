@@ -9,7 +9,7 @@ export class RecipeService {
 
   private recipes: Recipe[] = [
     new Recipe('Pizza Recipe',
-      'Here\'s How Yum! Brands Plans to Fix Pizza Hut',
+      'Here\'s How Yum! delicious Pizza',
       'https://g.foolcdn.com/editorial/images/453272/pizza.jpg',
       [
         new Ingredient('Cups warm water', 1 ),
@@ -17,8 +17,8 @@ export class RecipeService {
         new Ingredient('cup olive oil', 1)
 
       ]),
-    new Recipe('A delicious poutine Recipe ',
-      'Need Poutine Now? Here\'s How to Make it Fast',
+    new Recipe('A delicious poutine Recipe. ',
+      'Here\'s How to Make it Fast poutine fast.',
       'https://iamhomesteader.com/wp-content/uploads/2020/04/poutine-3.jpg',
       [
         new Ingredient('french fries', 50 ),
@@ -32,6 +32,10 @@ export class RecipeService {
   getRecipes() {
     return this.recipes.slice();
   }
+  getRecipe(index: number) {
+  return this.recipes[index];
+  }
+
   addIngredientsToShoppingList(ingredients: Ingredient[]) {
   this.slService.addIngredients(ingredients);
   }
