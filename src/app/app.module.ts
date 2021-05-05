@@ -12,6 +12,11 @@ import { ShoppingListComponent } from './shopping-list/shopping-list.component';
 import { ShoppingEditComponent } from './shopping-list/shopping-edit/shopping-edit.component';
 import {DropdownDirective} from './shared/dropdown.directive';
 import {ShoppingListService} from './shopping-list/shopping-list.service';
+import {AppRoutingModules} from './app-routing.modules';
+import { RecipeStartComponent } from './recipes/recipe-start/recipe-start.component';
+import { RecipeEditComponent } from './recipes/recipe-edit/recipe-edit.component';
+
+
 // import { WineryComponent } from './winery/winery.component';
 // import { ServerElementComponent } from './server-element/server-element.component';
 // import { GameControlComponent } from './game-control/game-control.component';
@@ -33,7 +38,9 @@ import {ShoppingListService} from './shopping-list/shopping-list.service';
     RecipeItemComponent,
     ShoppingListComponent,
     ShoppingEditComponent,
-    DropdownDirective
+    DropdownDirective,
+    RecipeStartComponent,
+    RecipeEditComponent
     // WineryComponent,
     // ServerElementComponent,
     // GameControlComponent,
@@ -47,6 +54,9 @@ import {ShoppingListService} from './shopping-list/shopping-list.service';
   imports: [
     BrowserModule,
     FormsModule,
+    AppRoutingModules
+
+
   ],
   providers: [ShoppingListService],
   bootstrap: [AppComponent]
